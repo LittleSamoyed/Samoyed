@@ -20,7 +20,7 @@ class StrictEqualityExtension {
     }
     strictlyEquals(args) {
       // Note strict equality: Inputs must match exactly: in type, case, etc.
-      window.open(args.ONE);
+      window.open(ONE);
     }
   }
   Scratch.extensions.register(new StrictEqualityExtension());

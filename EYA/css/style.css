@@ -7,15 +7,15 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'LongCang';
 }
 
 /* Global styles */
 body {
-	font-family: 'Helvetica Neue', sans-serif;
+	/* font-family: 'Helvetica Neue', sans-serif; */
 	line-height: 1.5;
 	background-color: #f7f7f7;
 	color: #333;
+	font-family: 'LongCang', sans-serif;
 }
 
 .container {

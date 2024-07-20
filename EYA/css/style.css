@@ -1,10 +1,13 @@
 /* Reset styles */
+@font-face {
+	font-family: 'LongCang';
+	src: url('https://littlesamoyed.github.io/Samoyed/EYA/css/LongCang-Regular.ttf') format('truetype');
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: LongCang-Regular;
-	src:url("https://littlesamoyed.github.io/Samoyed/EYA/css/LongCang-Regular.ttf")
+	font-family: LongCang;
 }
 
 /* Global styles */

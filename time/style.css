@@ -1,0 +1,39 @@
+body {
+    font-family: "思源黑体", sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    background-color: #4CAF50; /* 绿色 */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;  /* logo 和其他内容之间的间距 */
+}
+
+.logo {
+    width: 150px;  /* 根据需要调整 logo 的宽度 */
+    height: auto;  /* 保持比例 */
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+    <link rel="stylesheet" href="s.css">
+    <script>
+        function convertTime(source) {
+            const vancouverInputs = document.querySelectorAll("#vancouver input");
+            const shanghaiInputs = document.querySelectorAll("#shanghai input");
+
+            const sourceInputs = source === 'vancouver' ? vancouverInputs : shanghaiInputs;
+            const targetInputs = source === 'vancouver' ? shanghaiInputs : vancouverInputs;
+
+            // 获取输入的源时间
+            const year = parseInt(sourceInputs[0].value, 10);
+            const month = parseInt(sourceInputs[1].value, 10) - 1; // 月份从0开始
+            const day = parseInt(sourceInputs[2].value, 10);
+            const hour = parseInt(sourceInputs[3].value, 10);
+            const minute = parseInt(sourceInputs[4].value, 10);
+
+            if (isNaN(year) || isNaN(month) || isNaN(day) || isNaN(hour) || isNaN(minute)) {
+                alert("请输入有效的日期和时间！");
+                return;
+            }
+
+            // 创建源时间的Date对象
+            const sourceDate = new Date(Date.UTC(year, month, day, hour, minute));
+
+            // 判断时差
+            let offsetHours = 0;
+            if (source === 'vancouver') {
+                // 温哥华 → 上海
+                offsetHours = 15; // 冬令时 (温哥华 UTC-8, 上海 UTC+8)
+            } else {
+                // 上海 → 温哥华
+                offsetHours = -15;
+            }
+
+            // 计算目标时间
+            const targetDate = new Date(sourceDate.getTime() + offsetHours * 60 * 60 * 1000);
+
+            // 更新目标时间输入框
+            targetInputs[0].value = targetDate.getUTCFullYear();
+            targetInputs[1].value = targetDate.getUTCMonth() + 1; // 月份从0开始
+            targetInputs[2].value = targetDate.getUTCDate();
+            targetInputs[3].value = targetDate.getUTCHours();
+            targetInputs[4].value = targetDate.getUTCMinutes();
+        }
+    </script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./acs.png" alt="Logo" class="logo">
+    </div>
+    <h1>Vancouver and Shanghai Time Converter</h1>
+
+    <div class="container" id="vancouver">
+        <h2>Vancouver, BC</h2>
+        <label>Year: <input type="number" value="2024"></label>
+        <label>Month: <input type="number" value="1"></label>
+        <label>Date: <input type="number" value="1"></label>
+        <label>Hour: <input type="number" value="1"></label>
+        <label>Minute: <input type="number" value="0"></label>
+        <button onclick="convertTime('vancouver')">Convert</button>
+    </div>
+
+    <div class="container" id="shanghai">
+        <h2>Shanghai, China</h2>
+        <label>Year: <input type="number" value="2024"></label>
+        <label>Month: <input type="number" value="1"></label>
+        <label>Date: <input type="number" value="1"></label>
+        <label>Hour: <input type="number" value="16"></label>
+        <label>Minute: <input type="number" value="0"></label>
+        <button onclick="convertTime('shanghai')">Convert</button>
+    </div>
+</body>
+</html>

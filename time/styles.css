@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.container h2 {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.container label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.container input {
+    width: 80px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.container button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #0056b3;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;  /* logo 和其他内容之间的间距 */
+}
+
+.logo {
+    width: 150px;  /* 根据需要调整 logo 的宽度 */
+    height: auto;  /* 保持比例 */
+}

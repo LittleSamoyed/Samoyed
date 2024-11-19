@@ -1,0 +1,166 @@
+/* 通用设置 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* 冷色调背景 */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* 页面头部 */
+h1 {
+    font-size: 2.5rem;
+    color: #1e3a8a; /* 深蓝色 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 容器 */
+.container {
+    background: #ffffff; /* 白色背景 */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 容器的hover效果 */
+.container:hover {
+    transform: scale(1.05);
+}
+
+/* 标题 */
+h2 {
+    font-size: 1.8rem;
+    color: #2563eb; /* 冬季蓝色 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 输入框 */
+input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #cbd5e1; /* 淡灰色边框 */
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #f9fafb; /* 浅色背景 */
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #2563eb; /* 聚焦时的蓝色边框 */
+}
+
+/* 按钮 */
+button {
+    background-color: #2563eb; /* 蓝色按钮 */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d4ed8; /* 按钮悬浮时颜色变深 */
+}
+
+/* 标签 */
+label {
+    font-size: 1rem;
+    color: #4b5563; /* 深灰色 */
+    display: block;
+    margin-top: 10px;
+}
+
+/* 页面响应式布局 */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    input[type="number"] {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    input[type="number"] {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;  /* logo 和其他内容之间的间距 */
+}
+
+.logo {
+    width: 150px;  /* 根据需要调整 logo 的宽度 */
+    height: auto;  /* 保持比例 */
+}

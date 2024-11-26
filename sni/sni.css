@@ -1,0 +1,89 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 包装内容 */
+.wrapper-lg {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+    color: #555;
+}
+
+/* 提示信息 */
+.tip {
+    background: #eaf7ff;
+    border-left: 4px solid #007bff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* 按钮样式 */
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* 文本框样式 */
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+/* 错误信息 */
+#err {
+    font-size: 14px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* 调整执行结果框 */
+textarea[readonly] {
+    background: #f9f9f9;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .wrapper-lg {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    textarea {
+        font-size: 12px;
+    }
+}

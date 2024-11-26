@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNI 伪装工具使用教程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        code {
+            background: #eaf7ff;
+            color: #333;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        .note {
+            background: #fffbe6;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chrome 安装及配置教程</h1>
+        
+        <h2>步骤 1: 下载并安装 Google Chrome</h2>
+        <p>前往 <a href="https://www.google.cn/chrome" target="_blank" class="btn">下载谷歌 Chrome</a>，点击运行安装程序。</p>
+        <p>安装完成后，按照以下步骤继续操作。</p>
+        
+        <h2>步骤 2: 查找 Chrome 快捷方式</h2>
+        <p>按下 <code>Windows+S</code>，在搜索框中输入 <strong>chrome</strong>。</p>
+        <p>找到 Google Chrome 后，右键单击，选择 <strong>打开文件所在的位置</strong>。</p>
+        <p>在新的文件资源管理器窗口中，再次右键单击 <strong>Google Chrome 快捷方式</strong>，选择 <strong>打开文件所在的位置</strong>。</p>
+
+        <h2>步骤 3: 打开 PowerShell 或命令行</h2>
+        <p>在当前文件夹中，按下 <strong>Shift</strong> 键，同时右键单击空白区域，选择 <strong>在此处打开 PowerShell 窗口</strong> 或 <strong>打开命令行窗口</strong>。</p>
+
+        <h2>步骤 4: 输入命令</h2>
+        <p>在命令行中，输入以下命令并按下回车键：</p>
+        <pre>chrome.exe+执行结果中的内容</pre>
+        <p>以下是一个示例：</p>
+        <pre>chrome.exe --host-rules="MAP *google* g.cn,MAP *youtube.com g.cn,MAP *.ggpht.com g.cn,MAP i.ytimg.com g.cn," --host-resolver-rules="MAP g.cn 185.24.219.130," --test-type --ignore-certificate-errors</pre>
+
+        <div class="note">
+            <p><strong>提示:</strong> 如果运行命令时出现问题，请检查当前文件夹是否包含 <code>chrome.exe</code> 文件。</p>
+        </div>
+    </div>
+</body>
+</html>
